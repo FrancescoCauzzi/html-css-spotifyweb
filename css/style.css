@@ -15,7 +15,10 @@
   position:fixed;
 }
 
-
+a{
+  text-decoration: none;
+  color: white;
+}
 
 /* common */
 
@@ -23,13 +26,7 @@
   
 }
 
-.navbar-left{
-  
-}
 
-.upgrade{
-  
-}
 /* playbar in fondo */
 .play-bar{  
   height: 12vh;
@@ -211,25 +208,159 @@
   height: 3px;
   width: 85%;
   background-color: #878787;
-
-
-
-
 }
-
-
-
-
-
-
 
 /* bottom-right */
 
 
-
 /* playbar in fondo */
 
+/* navbar-left */
+.navbar-left{
+  height: 88vh;
+  width: 15vw;
+  background-color: black;
+  padding: 30px 20px 20px 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
 
-.albums-container{
+.navbar-left i{
+  margin-right: 5px;
+}
+
+.navbar-left .navbar-left-top {
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
 
 }
+
+.navbar-left .navbar-left-bottom {
+  justify-content: flex-end;
+  flex-direction: column;
+
+}
+
+.navbar-left .navbar-left-top > *, .navbar-left .navbar-left-bottom >* {
+  color: #878787;
+  cursor: pointer;
+  margin-bottom: 0px;
+  font-size: 1.1em;
+  padding: 10px 20px 10px 20px;
+}
+
+
+
+
+.navbar-left .navbar-left-top :nth-child(1):hover, .navbar-left .navbar-left-bottom >*:hover, .navbar-left .navbar-left-top .playlist > *:hover {
+  color: white;
+
+} 
+
+.navbar-left .navbar-left-top .playlist > *:hover,.navbar-left .navbar-left-top .home:hover , .navbar-left .navbar-left-top .search:hover, .navbar-left .navbar-left-top .libreria:hover ,.navbar-left .navbar-left-bottom >*:hover{
+  border-left: 2px solid #ADFF2F;
+}
+
+.navbar-left .navbar-left-top .logo{
+  margin-bottom: 30px;
+  
+}
+
+.navbar-left .navbar-left-top .playlist{
+  padding-left: 0;
+}
+
+.navbar-left .navbar-left-top .playlist .titolo{
+  cursor: default;
+
+}
+
+.navbar-left .navbar-left-top .playlist .titolo:hover, .navbar-left .navbar-left-bottom hr:hover{
+  border-left: none;
+
+}
+
+.navbar-left .navbar-left-top .playlist > *{
+  
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+}
+
+.navbar-left .navbar-left-top .playlist .titolo{
+  color: white;
+}
+
+.navbar-left .navbar-left-bottom hr{
+  padding: 0;
+}
+
+
+.navbar-left .navbar-left-bottom .profile{
+  flex-direction: row;
+  margin-bottom: 0px;
+}
+
+.navbar-left .navbar-left-bottom .profile .profile-icon{
+  background-color: #878787;
+  color: white;
+  font-size: 1.3em;
+  border-radius: 50%;
+  
+}
+
+.navbar-left .navbar-left-bottom .profile .profile-icon i{
+  margin-right: 0px;
+}
+
+.navbar-left .navbar-left-bottom .profile .profile-name{
+  margin-left: 5px;
+}
+
+
+
+/* navbar-left */
+
+
+/* upgrade bar */
+.upgrade{
+  height: 10vh;
+  width: 85vw;
+  background-color: #080B12;
+  right: 0%;
+  padding: 0px 10px 0px 10px;
+  justify-content: flex-end;
+  opacity: 0.5;
+}
+
+.upgrade .upgrade-button{
+  align-items: center;
+}
+
+.upgrade .upgrade-button button#upgrade-btn{
+  padding: 10px 35px 10px 35px;
+  height: 30px;
+  border-radius: 25px;
+  border-color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+/* upgrade bar */
+/* albums container */
+.albums-container{
+  padding-top: 10vh;
+  background-color: #141922;
+  height: 100%;
+  width: 80%;
+
+}
+
+
+
+
+/* albums container */
