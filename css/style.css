@@ -23,6 +23,8 @@ a{
 /* common */
 
 .container{
+  width: 100%;
+  height: 100%;
   
 }
 
@@ -355,8 +357,9 @@ a{
 .albums-container{
   padding-top: 10vh;
   background-color: #141922;
-  height: 100%;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
+  margin-left: 15vw;
 
 }
 
