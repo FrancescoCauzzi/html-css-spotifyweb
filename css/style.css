@@ -263,6 +263,7 @@ a{
 
 .navbar-left .navbar-left-top .playlist > *:hover,.navbar-left .navbar-left-top .home:hover , .navbar-left .navbar-left-top .search:hover, .navbar-left .navbar-left-top .libreria:hover ,.navbar-left .navbar-left-bottom >*:hover{
   border-left: 2px solid #ADFF2F;
+  padding-left: 18px;
 }
 
 .navbar-left .navbar-left-top .logo{
@@ -296,6 +297,8 @@ a{
 
 .navbar-left .navbar-left-bottom hr{
   padding: 0;
+  margin: 5px 0 5px 0;
+  cursor: default;
 }
 
 
@@ -357,11 +360,54 @@ a{
 .albums-container{
   padding-top: 10vh;
   background-color: #141922;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
-  margin-left: 15vw;
+  padding-left: 15vw;
+  overflow-y: scroll;
+}
+
+/* spotify offers */
+.albums-container .spotify-offers{
+  width: 100%;
+  flex-direction: row;
+  justify-content:center;
+  
+}
+
+.albums-container .spotify-offers ul{
+  list-style: none;
+  padding: 15px 0px 15px 0px;
+  flex-direction: row;
+  
+  
 
 }
+
+.albums-container .spotify-offers ul li{
+  padding: 0 15px 0 15px;
+  
+}
+
+.albums-container .spotify-offers ul .first-li{
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.albums-container .spotify-offers ul li #in-evidenza{
+  width: 40%;
+  border-color: #ADFF2F;
+  
+
+}
+
+
+.albums-container .spotify-offers ul li a {
+  color: #878787;
+  font-weight: bold;
+}
+/* spotify offers */
+
 
 
 
