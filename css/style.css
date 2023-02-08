@@ -366,7 +366,7 @@ a{
   width: calc(100% - 210px);
   background-color: #080B12;
   right: 0%;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 25px 0px 10px;
   justify-content: flex-end;
   opacity: 0.5;
 }
