@@ -313,6 +313,7 @@ a{
 
 .navbar-left .navbar-left-top .playlist .titolo:hover, .navbar-left .navbar-left-bottom hr:hover{
   border-left: none;
+  padding-left: 20px;
 
 }
 
@@ -479,24 +480,29 @@ a{
 
 /* width: calc( 100% / [numero colonne totali] * [colonne che vogliamo occupare] - ([spazio da creare] / [colonne totali] * [spazi vuoti nella riga] )  */
 
-.recently-played .album {
+.albums-container .recently-played .album {
   width: calc(100% / 6 * 1 - (10px / 6 *5));
   flex-direction: column;
   gap:10px;
 }
 
-  .album .album-image{
+
+.album .album-image{
   width: 100%;
 }
 
-  .album .album-image img {
+.album .album-image:hover{
+  cursor: pointer;
+}
+
+.album .album-image img {
   object-fit: contain;
   width: 100%;
   height: 100%;
   
 }
 
-  .album .album-description{
+.album .album-description{
   flex-direction: column;
   gap:6px;
   width: 100%;
@@ -504,12 +510,17 @@ a{
 
 }
 
-  .album .album-description .album-title {
-  color: white
+.album .album-description .album-title {
+  color: white;
+  text-align: center;
+  cursor: pointer;
 }
 
-  .album .album-description .album-subtitle {
+.album .album-description .album-subtitle {
   color: #878787;
+  text-align: center;
+  cursor: pointer;
+  
 }
 
 
