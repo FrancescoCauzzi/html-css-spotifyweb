@@ -246,8 +246,8 @@ a{
 /* navbar-left */
 .navbar-left{
   height: calc(100% - 12vh);
-  width: 250px;
-  min-width: 250px;
+  width: 210px;
+  min-width: 210px;
   background-color: black;
   padding: 30px 20px 20px 0px;
   flex-direction: column;
@@ -362,7 +362,7 @@ a{
 /* upgrade bar */
 .upgrade{
   height: 10vh;
-  width: calc(100% - 250px);
+  width: calc(100% - 210px);
   background-color: #080B12;
   right: 0%;
   padding: 0px 10px 0px 10px;
@@ -391,8 +391,8 @@ a{
 .albums-container{
   padding-top: 10vh;
   background-color: #141922;
-  height: 100% ;
-  width: calc(100% - 150px);
+  height: 90% ;
+  width: calc(100% - 210px);
   padding-left: 15px;
   padding-right: 15px;
   overflow-y: scroll;
