@@ -298,7 +298,7 @@ a{
 }
 
 .navbar-left .navbar-left-top .logo{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   
 }
 
@@ -468,11 +468,13 @@ a{
 /* spotify album */
 
 
-
+.albums-container h2:first-of-type{
+  margin-bottom: 25px;
+}
 
 .albums-container .recently-played{
   flex-direction: row;
-  justify-content: space-between;
+  gap:10px;
   flex-wrap: wrap;
   margin-bottom: 45px;
 }
@@ -483,7 +485,7 @@ a{
 .albums-container .recently-played .album {
   width: calc(100% / 6 * 1 - (10px / 6 *5));
   flex-direction: column;
-  gap:10px;
+  
 }
 
 
@@ -530,7 +532,7 @@ a{
 /* .targeted-music */
 .albums-container .targeted-music{
   flex-direction: row;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 45px;
@@ -549,7 +551,7 @@ a{
 /* .artisti-popolari */
 .albums-container .artisti-popolari{
   flex-direction: row;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 45px;
@@ -567,12 +569,63 @@ a{
   border-radius: 50%;
 
 } 
-
-
-
 /* .artisti-popolari */
-
-
-
-
 /* albums container */
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .albums-container .recently-played .album {
+    width: calc(100% / 4 * 1 - (10px / 4 *3));
+   justify-content: none;
+    
+  }
+  .albums-container .targeted-music .album {
+    width: calc(100% / 4 * 1 - (10px / 2 *1));
+    
+  }
+
+  .albums-container .artisti-popolari .album {
+    width: calc(100% / 4 * 1 - (10px / 1 *1));
+    flex-direction: column;
+    gap:10px;
+  }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+  .albums-container .recently-played .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+   justify-content: none;
+    
+  }
+  .albums-container .targeted-music .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+    
+  }
+
+  .albums-container .artisti-popolari .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+    flex-direction: column;
+    gap:10px;
+  }
+
+
+}
+
+@media screen and (max-width: 575px){
+  .albums-container .recently-played .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+   justify-content: none;
+    
+  }
+  .albums-container .targeted-music .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+    
+  }
+
+  .albums-container .artisti-popolari .album {
+    width: calc(100% / 2 * 1 - (10px / 1 *1));
+    flex-direction: column;
+    gap:10px;
+  }
+
+}
