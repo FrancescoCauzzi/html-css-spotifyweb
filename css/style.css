@@ -358,6 +358,63 @@ a{
 
 
 /* navbar-left */
+/* .navbar-left-small-screen */
+
+.navbar-left-small-screen {
+  width: 50px;
+  max-width: 50px;
+  background-color: black;
+  height: calc(100% - 12vh);
+  padding: 5px 10px 5px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  display: none;
+  
+
+}
+
+
+.navbar-left-small-screen .navbar-left-small-screen-top{
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navbar-left-small-screen .navbar-left-small-screen-top .logo-small-screen img{
+  width: 100%;
+}
+
+
+.navbar-left-small-screen .navbar-left-small-screen-bottom{
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.navbar-left-small-screen .navbar-left-small-screen-top > *,.navbar-left-small-screen .navbar-left-small-screen-bottom > *{
+  justify-content: center;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: white;  
+}
+
+.navbar-left-small-screen .navbar-left-small-screen-top > *:hover,.navbar-left-small-screen .navbar-left-small-screen-bottom > *:hover{
+  cursor: pointer;
+  font-weight: bold; 
+}
+
+.navbar-left-small-screen .navbar-left-small-screen-bottom .download-small-screen {
+  font-size: 0.8em;
+}
+
+.navbar-left-small-screen .navbar-left-small-screen-bottom .user-small-screen {
+  background-color: #878787;
+  
+  border-radius: 50%;
+  
+}
+
+/* .navbar-left-small-screen */
+
 
 
 /* upgrade bar */
@@ -390,10 +447,10 @@ a{
 /* upgrade bar */
 /* albums container */
 .albums-container{
+  width: calc(100% - 210px);
   padding-top: 10vh;
   background-color: #141922;
   height: 90% ;
-  width: calc(100% - 210px);
   padding-left: 15px;
   padding-right: 15px;
   overflow-y: scroll;
@@ -612,6 +669,20 @@ a{
 }
 
 @media screen and (max-width: 575px){
+  .navbar-left{
+    display: none;
+  }
+
+  .navbar-left-small-screen{
+    display: flex;
+  }
+  .upgrade{
+    
+    width: calc(100% - 50px);
+  }
+  .albums-container{
+    width: calc(100% - 50px);
+  }
   .albums-container .recently-played .album {
     width: calc(100% / 2 * 1 - (10px / 1 *1));
    justify-content: none;
