@@ -23,8 +23,9 @@ a{
 /* common */
 
 .container{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
   
 }
 
@@ -36,11 +37,14 @@ a{
   background-color: #282828;
   bottom: 0%;
   padding: 20px 20px 20px 20px;
+  justify-content: space-between;
 }
 
 /* bottom-left */
 .bottom-left{
-  width: 20%;
+  width: 100%;
+  
+  max-width: 240px;
   flex-direction: row;
   gap:20px;
   justify-content: flex-start;
@@ -49,13 +53,14 @@ a{
 .play-bar .bottom-left .current-played{
   flex-direction: row;
   width: 100%;
+  gap:10px;
   
-  justify-content: flex-start;
+  justify-content: space-between
 }
 
 .play-bar .bottom-left .current-played .album-image{
-  width: 30%;
-  margin-right: 15px;
+  width: 100%;
+  
   
   
 }
@@ -65,15 +70,19 @@ a{
   height: 100%;
   width: 100%;
   min-width: 50px;
+  
+  
 }
 
 
 
 .play-bar .bottom-left .current-played .song-description{
   flex-direction: column;
-  width: 70%;
+  min-width: 90px;
+  width: 100%;
   justify-content: center;
   font-weight: bold;
+  flex-grow: 1;
   
   
 }
@@ -84,41 +93,54 @@ a{
 
 .play-bar .bottom-left .current-played .song-description .song-name{
   color: #878787;
+  font-size: 0.8em;
 
 }
 
-.play-bar .bottom-left .like, .play-bar .bottom-left .folder{
+ .play-bar .bottom-left .like-and-folder{
+  justify-content: space-between;
+  gap:15px
+}
+
+.play-bar .bottom-left .like, .play-bar .bottom-left .like-and-folder .folder{
   align-items: center;
   font-size: 1.5em;
   color: #878787;
 }
 
-.play-bar .bottom-left .like #heart{
+.play-bar .bottom-left .like-and-folder .like #heart{
   cursor: pointer;
 }
 
 
 
-.play-bar .bottom-left .folder #folder-icon{
+.play-bar .bottom-left .like-and-folder .folder #folder-icon{
   cursor: pointer;
 }
 
 /* bottom-left */
 /* bottom-center */
 .play-bar .bottom-center{
-  
+  width: 100%;
+    min-width: 250px;
+    max-width: 530px;
   flex-direction: column;
-  width: 60%;
+  justify-content: space-between;
+  
+ 
+  
 }
 
 .play-bar .bottom-center .commands-above{
+  width: 100%;
   
   flex-direction: row;
   color: white;
   font-size: 1.5em;
-  gap:25px;
+  gap:20px;
   justify-content: center;
   align-items: center;
+  
 }
 .play-bar .bottom-center .commands-above > *{
   cursor: pointer;
@@ -135,6 +157,8 @@ a{
   color: white;
   font-weight: bold;
   width: 100%;
+  
+
   justify-content: center;
   flex-direction: row;
   padding: 0 40px 0 40px;
@@ -143,9 +167,10 @@ a{
 .play-bar .bottom-center .timer .from-start-timer{
   width: 10%;
   justify-content: flex-end;
+}
 
-
-
+.play-bar .bottom-center .timer .until-end-timer{
+  width: 10%;
 }
 
 .play-bar .bottom-center .timer .progress-bar{
@@ -170,9 +195,7 @@ a{
 }
 
 
-.play-bar .bottom-center .timer .until-end-timer{
-  width: 10%;
-}
+
 
 
 
@@ -180,23 +203,26 @@ a{
 
 /* bottom-right */
 .play-bar .bottom-right{
-  width: 20%;
+  max-width: 240px;
+  width: 100%;
   flex-direction: row;
   gap:20px;
-  justify-content: flex-end;
+  justify-content:flex-end;
+
   color: white;
   align-items: center;
 
 }
 
 .play-bar .bottom-right > *{
-  width: 10%;
+  
   cursor: pointer;
 }
 
 .play-bar .bottom-right .volume-bar{
   flex-direction: row;
   width: 70%;
+  min-width: 100px;
   
 }
 
@@ -219,8 +245,9 @@ a{
 
 /* navbar-left */
 .navbar-left{
-  height: 88vh;
-  width: 15vw;
+  height: calc(100% - 12vh);
+  width: 250px;
+  min-width: 250px;
   background-color: black;
   padding: 30px 20px 20px 0px;
   flex-direction: column;
@@ -235,6 +262,7 @@ a{
 .navbar-left .navbar-left-top {
   justify-content: flex-start;
   width: 100%;
+  height: 100%;
   flex-direction: column;
 
 }
@@ -242,7 +270,7 @@ a{
 .navbar-left .navbar-left-bottom {
   justify-content: flex-end;
   flex-direction: column;
-
+  height: 100%;
 }
 
 .navbar-left .navbar-left-top > *, .navbar-left .navbar-left-bottom >* {
@@ -256,14 +284,17 @@ a{
 
 
 
-.navbar-left .navbar-left-top :nth-child(1):hover, .navbar-left .navbar-left-bottom >*:hover, .navbar-left .navbar-left-top .playlist > *:hover {
+/* .navbar-left .navbar-left-top :nth-child(1):hover, .navbar-left .navbar-left-bottom >*:hover, .navbar-left .navbar-left-top .playlist > *:hover {
   color: white;
+  font-weight: bold;
 
-} 
+}  */
 
 .navbar-left .navbar-left-top .playlist > *:hover,.navbar-left .navbar-left-top .home:hover , .navbar-left .navbar-left-top .search:hover, .navbar-left .navbar-left-top .libreria:hover ,.navbar-left .navbar-left-bottom >*:hover{
   border-left: 2px solid #ADFF2F;
   padding-left: 18px;
+  color: white;
+  font-weight: bold;
 }
 
 .navbar-left .navbar-left-top .logo{
@@ -331,7 +362,7 @@ a{
 /* upgrade bar */
 .upgrade{
   height: 10vh;
-  width: 85vw;
+  width: calc(100% - 250px);
   background-color: #080B12;
   right: 0%;
   padding: 0px 10px 0px 10px;
@@ -360,17 +391,29 @@ a{
 .albums-container{
   padding-top: 10vh;
   background-color: #141922;
-  height: 95vh;
-  width: 100%;
-  padding-left: 15vw;
+  height: 100% ;
+  width: calc(100% - 150px);
+  padding-left: 15px;
+  padding-right: 15px;
   overflow-y: scroll;
+  flex-direction: column;
 }
+
+.albums-container h2{
+  color: white;
+  margin-bottom: 5px;
+}
+
+.albums-container h6{
+  color: #878787;
+  margin-bottom: 10px;
+}
+
 
 /* spotify offers */
 .albums-container .spotify-offers{
   width: 100%;
-  flex-direction: row;
-  justify-content:center;
+  
   
 }
 
@@ -378,6 +421,8 @@ a{
   list-style: none;
   padding: 15px 0px 15px 0px;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   
   
 
@@ -385,7 +430,14 @@ a{
 
 .albums-container .spotify-offers ul li{
   padding: 0 15px 0 15px;
+  margin-bottom: 30px;
   
+  
+}
+
+.albums-container .spotify-offers ul li a:hover{
+  color: white;
+  font-weight: bold;
 }
 
 .albums-container .spotify-offers ul .first-li{
@@ -408,6 +460,106 @@ a{
 }
 /* spotify offers */
 
+
+
+
+/* .recently-played */
+/* spotify album */
+
+
+
+
+.albums-container .recently-played{
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+
+/* width: calc( 100% / [numero colonne totali] * [colonne che vogliamo occupare] - ([spazio da creare] / [colonne totali] * [spazi vuoti nella riga] )  */
+
+.recently-played .album {
+  width: calc(100% / 6 * 1 - (10px / 6 *5));
+  flex-direction: column;
+  gap:10px;
+}
+
+  .album .album-image{
+  width: 100%;
+}
+
+  .album .album-image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  
+}
+
+  .album .album-description{
+  flex-direction: column;
+  gap:6px;
+  width: 100%;
+  align-items: center;
+
+}
+
+  .album .album-description .album-title {
+  color: white
+}
+
+  .album .album-description .album-subtitle {
+  color: #878787;
+}
+
+
+/* spotify album */
+/* .recently-played */
+
+/* .targeted-music */
+.albums-container .targeted-music{
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 45px;
+
+} 
+
+.albums-container .targeted-music .album {
+  width: calc(100% / 6 * 1 - (10px / 2 *1));
+  flex-direction: column;
+  gap:10px;
+}
+
+
+
+/* .targeted-music */
+/* .artisti-popolari */
+.albums-container .artisti-popolari{
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 45px;
+
+} 
+
+.albums-container .artisti-popolari .album {
+  width: calc(100% / 6 * 1 - (10px / 2 *1));
+  flex-direction: column;
+  gap:10px;
+}
+
+
+.albums-container .artisti-popolari .album .album-image img{
+  border-radius: 50%;
+
+} 
+
+
+
+/* .artisti-popolari */
 
 
 

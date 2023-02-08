@@ -11,16 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/default.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/default.css">
 
   <title>Spotify_88</title>
 </head>
 
 <body>
-  <div class="container ">
+  <div class="container flexbox ">
     <!-- navbar-left -->
-    <nav class="navbar-left flexbox fixed">
+    <nav class="navbar-left flexbox ">
       <div class="navbar-left-top flexbox">
         <div class="logo flexbox">
           <img src="img/logo.svg" alt="">
@@ -160,13 +160,16 @@
           </div>
 
         </div>
-        <div class="like flexbox">
-          <span id="heart"><i class="fa-regular fa-heart"></i></span>
-        </div>
-        <div class="folder flexbox">
-          <span id="folder-icon">
-            <i class="fa-regular fa-folder"></i>
-          </span>
+        <div class="like-and-folder flexbox">
+
+          <div class="like flexbox">
+            <span id="heart"><i class="fa-regular fa-heart"></i></span>
+          </div>
+          <div class="folder flexbox">
+            <span id="folder-icon">
+              <i class="fa-regular fa-folder"></i>
+            </span>
+          </div>
         </div>
 
       </div>
@@ -239,8 +242,8 @@
     </div>
     <!-- playbar-bottom -->
     <!-- albums container -->
-    <div class="albums-container ">
-      <div class="spotify-offers flexbox">
+    <div class="albums-container flexbox">
+      <div class="spotify-offers ">
         <ul class="spotify-offers-list flexbox">
           <li class="first-li flexbox">
             <a href="">IN EVIDENZA</a>
@@ -268,6 +271,7 @@
       <div class="recently-played flexbox">
         <div class="album flexbox">
           <div class="album-image">
+            <img src="img/metal_lifting.jpg" alt="">
 
           </div>
           <div class="album-description flexbox">
@@ -281,17 +285,110 @@
           </div>
 
         </div>
-      </div>
-      <h2>Creato per John Doe</h2>
-      <h6>Più ascolti, più accurati saranno i suggerimenti</h6>
-      <div class="targeted-music">
         <div class="album flexbox">
           <div class="album-image">
+            <img src="img/stranger.jpeg" alt="">
 
           </div>
           <div class="album-description flexbox">
             <div class="album-title flexbox">
-              <h5>Heavy Metal</h5>
+              <h5>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Kyle Dixon & Michael Stein</h6>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/aquietplace.jpeg" alt="">
+
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>A quiet place</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Subtitle</h6>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/split.jpeg" alt="">
+
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>Split</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Subtitle</h6>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/cure.jpeg" alt="">
+
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>A cure for wellness</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Subtitle</h6>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/sinister.jpeg" alt="">
+
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>Sinister</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Subtitle</h6>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <h2>Creato per John Doe</h2>
+      <h6>Più ascolti, più accurati saranno i suggerimenti</h6>
+      <div class="targeted-music flexbox">
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/radar.jpeg" alt="">
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>Realease Radar</h5>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/mixdaily.jpeg" alt="">
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>Daily Mix 1</h5>
             </div>
 
 
@@ -302,9 +399,26 @@
       </div>
       <h2>Artisti più popolari</h2>
       <h6>Più ascolti, più accurati saranno i suggerimenti</h6>
-      <div class="recently-played flexbox">
+      <div class="artisti-popolari flexbox">
         <div class="album flexbox">
           <div class="album-image">
+            <img src="img/youg.jpeg" alt="">
+
+          </div>
+          <div class="album-description flexbox">
+            <div class="album-title flexbox">
+              <h5>Heavy Metal</h5>
+            </div>
+            <div class="album-subtitle">
+              <h6>Subtitle</h6>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="album flexbox">
+          <div class="album-image">
+            <img src="img/einaudi.jpeg" alt="">
 
           </div>
           <div class="album-description flexbox">
