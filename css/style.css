@@ -469,13 +469,14 @@ a{
 
 /* upgrade bar */
 .upgrade{
-  height: 10vh;
+  height: 90px;
   width: calc(100% - 210px);
   background-color: #080B12;
   right: 0%;
-  padding: 0px 25px 0px 10px;
+  padding: 10px 25px 10px 10px;
   justify-content: flex-end;
   opacity: 0.5;
+  
 }
 
 .upgrade .upgrade-button{
@@ -491,19 +492,27 @@ a{
   background-color: transparent;
   align-items: center;
   cursor: pointer;
+}
 
+.upgrade .upgrade-button button#upgrade-btn:hover{
+  background-color: #878787;
+}
+
+.upgrade .upgrade-button button:hover a{
+  color: white;
+  opacity: 1.5;
 }
 
 /* upgrade bar */
 /* albums container */
 .albums-container{
   width: calc(100% - 210px);
-  padding-top: 10vh;
+  padding-top: 95px;
   background-color: #141922;
   height: 90% ;
   padding-left: 15px;
   padding-right: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex-direction: column;
 }
 
@@ -530,17 +539,12 @@ a{
   padding: 15px 0px 15px 0px;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
-  
-  
-
+  flex-wrap: wrap; 
 }
 
 .albums-container .spotify-offers ul li{
   padding: 0 15px 0 15px;
   margin-bottom: 30px;
-  
-  
 }
 
 .albums-container .spotify-offers ul li a:hover{
