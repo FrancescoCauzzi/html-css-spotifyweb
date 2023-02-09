@@ -222,7 +222,7 @@ body {
 }
 
 
-.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner .p-bar-dot{
+.p-bar-dot{
   border-radius: 50%;
   background-color: #C1C1C1;
   height: 10px;
@@ -231,7 +231,7 @@ body {
   display: none;
 }
 
-.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner:hover .p-bar-dot{
+.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner:hover .p-bar-dot, .play-bar .bottom-right .volume-bar-inner:hover .p-bar-dot{
   display: block;
 }
 
@@ -278,6 +278,8 @@ body {
   height: 3px;
   width: 20%;
   background-color: #C1C1C1;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .play-bar .bottom-right .volume-bar-inner:hover{  
