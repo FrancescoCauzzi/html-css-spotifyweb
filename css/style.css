@@ -204,9 +204,11 @@ body {
   width: 0%;
   background-color: #C1C1C1;
   height: 3px;
-  position: absolute;
+  position: relative;
   animation-name: bar-progress;
-  animation-duration: 360s;
+  animation-duration: 120s;
+  align-items: center;
+  justify-content: flex-end;
 
 }
 
@@ -215,19 +217,22 @@ body {
   100% {width: 100%} 
 }
 
-.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-dot{
+.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner:hover{
+  background-color: #ADFF2F;
+}
+
+
+.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner .p-bar-dot{
   border-radius: 50%;
   background-color: #C1C1C1;
   height: 10px;
   width: 10px;
-  animation-name: dot-progress;
-  animation-duration: 360s;
   position: absolute;
+  display: none;
 }
 
-@keyframes dot-progress {
-  0%   {left:0%}
-  100% {left: 100%} 
+.play-bar .bottom-center .timer .progress-bar .p-bar-outer .p-bar-inner:hover .p-bar-dot{
+  display: block;
 }
 
 .play-bar .bottom-center .timer .progress-bar .p-bar-outer{
@@ -239,12 +244,6 @@ body {
   position: relative;
 
 }
-
-
-
-
-
-
 
 
 /* bottom-center */
@@ -271,14 +270,18 @@ body {
 
 .play-bar .bottom-right .volume-bar-outer{
   height: 3px;
-  background-color: #C1C1C1;
+  background-color: #5A5A5A;
   width: 100%;
 }
 
 .play-bar .bottom-right .volume-bar-inner{
   height: 3px;
   width: 20%;
-  background-color: #878787;
+  background-color: #C1C1C1;
+}
+
+.play-bar .bottom-right .volume-bar-inner:hover{  
+  background-color: #ADFF2F;
 }
 
 /* bottom-right */
@@ -486,32 +489,52 @@ body {
   right: 0%;
   padding: 10px 25px 10px 10px;
   justify-content: flex-end;
-  opacity: 0.5;
+  opacity: 0.5; 
+  position: absolute;
+  z-index: 1;
   
 }
 
-.upgrade .upgrade-button{
+.upgrade-button{
   align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  z-index: 1;
+  
 }
 
-.upgrade .upgrade-button button#upgrade-btn{
+.upgrade-button button#upgrade-btn{
   padding: 10px 35px 10px 35px;
-  height: 30px;
+  
   border-radius: 25px;
   border-color: white;
   border: 1px solid white;
   background-color: transparent;
   align-items: center;
   cursor: pointer;
+  
 }
 
-.upgrade .upgrade-button button#upgrade-btn:hover{
-  background-color: #878787;
+.upgrade-button button#upgrade-btn:hover{
+
+  cursor: pointer;
+  
+  
 }
 
-.upgrade .upgrade-button button:hover a{
+.upgrade-button button a{
   color: white;
-  opacity: 1.5;
+  
+  
+}
+
+.upgrade-button button:hover a{
+  color: white;
+  font-weight: bold;
+  margin: 5px 5px 5px 5px;
+  
+  
 }
 
 /* upgrade bar */
