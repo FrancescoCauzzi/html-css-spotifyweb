@@ -37,18 +37,18 @@ body {
 
 /* playbar in fondo */
 .play-bar{  
-  height: 90px;
-  
-  
+  height: 90px; 
   width: 100vw;
   background-color: #282828;
   bottom: 0%;
+  
   padding: 20px 20px 0px 0px;
   justify-content: space-between;
   /* overflow-x: visible;
   overflow-y:; */
   font-size: 0.8em;
   position: absolute;
+  z-index: 1;
 }
 
 .play-bar .bottom-left, .play-bar .bottom-center, .play-bar .bottom-right{
@@ -614,10 +614,23 @@ body {
 
 .album .album-image{
   width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .album .album-image:hover{
   cursor: pointer;
+  
+}
+
+.album .album-image:hover .play-on-hover{
+  cursor: pointer;
+  display: block;
+}
+
+.album .album-image:hover img{
+  opacity: 0.7;
 }
 
 .album .album-image img {
@@ -625,6 +638,19 @@ body {
   width: 100%;
   height: 100%;
   
+}
+
+.album .album-image .play-on-hover{
+  position: absolute;
+  bottom: calc(50% - 1.8em);
+  left: calc(50% - 1.5em);
+  display: none;
+  
+}
+
+.album .album-image .play-on-hover span{
+  color: white;
+  font-size: 3em;
 }
 
 .album .album-description{
