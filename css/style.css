@@ -324,7 +324,7 @@ body {
   color: #878787;
   cursor: pointer;
   margin-bottom: 0px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 10px 20px 10px 20px;
 }
 
@@ -337,15 +337,22 @@ body {
 
 }  */
 
-.navbar-left .navbar-left-top .playlist > *:hover,.navbar-left .navbar-left-top .home:hover , .navbar-left .navbar-left-top .search:hover, .navbar-left .navbar-left-top .libreria:hover ,.navbar-left .navbar-left-bottom >*:hover{
-  border-left: 2px solid #ADFF2F;
-  padding-left: 18px;
+.navbar-left .navbar-left-top .playlist > *:hover,.navbar-left .navbar-left-top .home:hover , .navbar-left .navbar-left-top .search:hover, .navbar-left .navbar-left-top .libreria:hover ,.navbar-left .navbar-left-bottom .installa-app:hover{
+  /* border-left: 2px solid #ADFF2F;
+  padding-left: 18px; */
   color: white;
   font-weight: bold;
 }
 
 .navbar-left .navbar-left-top .logo{
   margin-bottom: 10px;
+  
+}
+
+.navbar-left .navbar-left-top .home{
+  margin-bottom: 10px;
+  border-left: 2px solid #ADFF2F;
+  padding-left: 18px;
   
 }
 
@@ -358,11 +365,11 @@ body {
 
 }
 
-.navbar-left .navbar-left-top .playlist .titolo:hover, .navbar-left .navbar-left-bottom hr:hover{
+/* .navbar-left .navbar-left-top .playlist .titolo:hover, .navbar-left .navbar-left-bottom hr:hover{
   border-left: none;
   padding-left: 20px;
 
-}
+} */
 
 .navbar-left .navbar-left-top .playlist > *{
   
@@ -380,10 +387,11 @@ body {
   cursor: default;
 }
 
-
 .navbar-left .navbar-left-bottom .profile{
   flex-direction: row;
   margin-bottom: 0px;
+  cursor: text;
+  align-items: center;
 }
 
 .navbar-left .navbar-left-bottom .profile .profile-icon{
@@ -399,7 +407,7 @@ body {
 }
 
 .navbar-left .navbar-left-bottom .profile .profile-name{
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 
